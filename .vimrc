@@ -1,0 +1,85 @@
+" GENERAL {{{
+" not vi-compatible
+set nocompatible
+
+" enable file type detection
+" autoload plugins for that file type
+" auto indent
+filetype plugin indent on
+
+" enable lexical highlighting
+syntax enable
+
+" show current line and column, and relative position in file 
+set ruler
+
+
+" using relative line number
+set number
+set relativenumber
+
+
+
+" default case-insensitivity
+set noignorecase
+
+" default highlight first search instance found
+" excellent for jump
+set incsearch
+
+"set statusline=%.20F
+"set statusline+=%=
+"set statusline+=%l
+"set statusline+=/
+"set statusline+=%L
+
+" briefly show matching paren...
+set showmatch
+set matchtime=5
+
+set tabstop=4 shiftwidth=4 softtabstop=4 
+
+
+
+" }}}
+
+let mapleader = "-"
+let maplocalleader = "\\"
+nnoremap <LocalLeader>ev :vsp $MYVIMRC<cr>
+nnoremap <LocalLeader>sv :source $MYVIMRC<cr>
+nnoremap <LocalLeader>fo }i" }}}<esc>{i"   {{{<esc>5hi
+
+" Vimscript seting {{{
+augroup filetype_vim 
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+" INSERT_MODE {{{
+" using jk instead of <esc> in insert mode
+inoremap jk <esc>
+inoremap <c-u> <esc>gUiwea
+" }}}
+
+
+" COMMAND_LINE_MODE  {{{
+
+" easier Ex command retrieval
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" longer cmd history
+set history=1000
+
+" }}}
+
+" WINDOW  {{{
+
+" easier window navigation
+nnoremap <c-h> <c-w><c-h>
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-l> <c-w><c-l>
+" }}}
+
