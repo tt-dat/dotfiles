@@ -47,7 +47,7 @@ let mapleader = "-"
 let maplocalleader = "\\"
 nnoremap <LocalLeader>ev :vsp $MYVIMRC<cr>
 nnoremap <LocalLeader>sv :source $MYVIMRC<cr>
-nnoremap <LocalLeader>fo }i" }}}<esc>{i"   {{{<esc>5hi
+nnoremap <LocalLeader>fo }i" }}}<esc>{i"   {{{<esc>4hi
 
 " Vimscript seting {{{
 augroup filetype_vim 
@@ -63,6 +63,9 @@ inoremap <c-u> <esc>gUiwea
 " }}}
 
 
+
+
+
 " COMMAND_LINE_MODE  {{{
 
 " easier Ex command retrieval
@@ -73,6 +76,7 @@ cnoremap <C-n> <Down>
 set history=1000
 
 " }}}
+
 
 " WINDOW  {{{
 
