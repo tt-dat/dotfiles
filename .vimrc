@@ -1,6 +1,32 @@
-" GENERAL {{{
+"  {{{" GENERAL {{{
 " not vi-compatible
 set nocompatible
+" }}}
+
+
+
+" PLUGIN {{{
+	" VIM-PLUG {{{
+		call plug#begin()
+
+		" list plugins here
+		
+		Plug 'christoomey/vim-tmux-navigator'
+		
+		call plug#end()
+	" }}}
+	
+	" TERMDEBUG {{{
+		" auto load termdebug when opening vim
+		packadd termdebug
+
+		" customize interface
+		let g:termdebughorizontal = 1
+	" }}}
+	
+" }}}
+
+
 
 " INDENT {{{
 " enable file type detection
@@ -10,6 +36,7 @@ filetype plugin indent on
 	autocmd!
 	autocmd FileType *.c gg=G
 " }}}
+
 
 " enable lexical highlighting
 syntax enable
@@ -61,7 +88,7 @@ nnoremap <LocalLeader>fo }i" }}}<esc>{i"  {{{<esc>3hi
 " Vimscript seting {{{
 augroup filetype_vim 
 	autocmd!
-	autocmd FileType vim setlocal foldmethod=marker
+	autocmd FileType vim,tmux setlocal foldmethod=marker
 augroup END
 " }}}
 
