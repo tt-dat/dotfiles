@@ -11,7 +11,22 @@ set nocompatible
 
 		" list plugins here
 		
+		" Seamless vim tmux navigation
 		Plug 'christoomey/vim-tmux-navigator'
+
+		" Easy surround
+		Plug 'tpope/vim-surround'
+
+		" Seamless git integration
+		Plug 'tpope/vim-fugitive'
+
+		" Easy arg, buffer, quickfix list navigation using [ and ]
+		Plug 'tpope/vim-unimpaired'
+		
+		" Enable dot command for plugins like surround.vim, unimpaired.vim
+		Plug 'tpope/vim-repeat'
+		" ???
+		silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 		
 		call plug#end()
 	" }}}
