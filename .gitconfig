@@ -1,0 +1,8 @@
+[user]
+	name = Tran Tien Dat
+	email = dat010206@outlook.com
+[core]
+	editor = vim
+[alias]
+	cm = commit
+	st = status
