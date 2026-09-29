@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/dat_home/course/CSAPP/hw/chap_2/include'
+let g:netrw_dirhist_2='/home/dat_home/course/CSAPP/hw/chap_2'
+let g:netrw_dirhist_1='/home/dat_home/course/CSAPP/hw/chap_2/src'
+let g:netrw_dirhist_0='/home/dat_home/course/CSAPP/hw/chap_2'
+let g:netrw_dirhist_9='/home/dat_home/course/CSAPP/hw/chap_2/include'
+let g:netrw_dirhist_8='/home/dat_home/course/CSAPP/hw/chap_2'
+let g:netrw_dirhist_7='/home/dat_home/course/CSAPP/hw/chap_2/src'
+let g:netrw_dirhist_6='/home/dat_home/course/CSAPP/hw/chap_2'
+let g:netrw_dirhist_5='/home/dat_home/course/CSAPP/hw/chap_2/bin'
+let g:netrw_dirhist_4='/home/dat_home/course/CSAPP/hw/chap_2'
