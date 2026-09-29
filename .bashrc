@@ -29,6 +29,10 @@ eval "$(zoxide init bash)"
 # force using z
 alias cd='echo "Nope, use z" && false'
 
+
+### GIT
+
+
 ### GITHUB_CLI
 # use 4-bit color palette
 gh config set accessible_colors enabled

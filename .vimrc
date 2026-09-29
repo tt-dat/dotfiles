@@ -3,9 +3,12 @@
 set nocompatible
 " }}}
 
+" allow editing other buffers even if current buffer is changed
+set hidden
 
 
 " PLUGIN {{{
+
 	" VIM-PLUG {{{
 		call plug#begin()
 
@@ -21,12 +24,18 @@ set nocompatible
 		Plug 'tpope/vim-fugitive'
 
 		" Easy arg, buffer, quickfix list navigation using [ and ]
+		" [<space> to add blank line
 		Plug 'tpope/vim-unimpaired'
 		
 		" Enable dot command for plugins like surround.vim, unimpaired.vim
 		Plug 'tpope/vim-repeat'
 		" ???
 		silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+
+		" enable auto pairing ([{
+		" jump outside current {} when at the end of a line inside
+		" use in insert mode
+		Plug 'jiangmiao/auto-pairs'
 		
 		call plug#end()
 	" }}}
@@ -40,6 +49,11 @@ set nocompatible
 	" }}}
 	
 " }}}
+
+
+" jump outside current }, ), ], ...
+" very useful and help protect your little finger from shift
+inoremap jj <esc>/[})\]"']<cr>a
 
 
 
@@ -163,5 +177,20 @@ command! -nargs=+ Rg execute 'grep ' . <q-args>
 " jump to position described at current line when cursor moved
 " <cr> to update that buffer 
 " <c-w><c-p> jump to previous window, a.k.a quickfix_list window
-autocmd Filetype qf autocmd CursorMoved <buffer> execute "normal \<cr>\<c-w>\<c-p>"
+" autocmd Filetype qf autocmd CursorMoved <buffer> execute "normal \<cr>\<c-w>\<c-p>"
 " }}}
+
+
+
+
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+
+
+
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
