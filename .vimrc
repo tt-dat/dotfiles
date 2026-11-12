@@ -128,7 +128,10 @@ inoremap jk <esc>
 inoremap <c-u> <esc>gUiwea
 " }}}
 
-
+" VISUAL_MODE {{{
+	" Copy to the top of tmux buffer lists
+	vnoremap ty :write !tmux load-buffer -<CR><CR>
+" }}}
 
 
 
