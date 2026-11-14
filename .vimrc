@@ -1,10 +1,25 @@
-"  {{{" GENERAL {{{
+"  GENERAL {{{"
+
+" should be ON TOP of everything else
 " not vi-compatible
 set nocompatible
-" }}}
+
+"  disable startup message
+set shortmess+=I
 
 " allow editing other buffers even if current buffer is changed
 set hidden
+
+" minimal number of screen lines above or below the cursor
+set scrolloff=5
+
+" auto change current working dir whenever opening files, switch buffers,
+" change windows
+set autochdir
+
+" tab completion behaves like the bash shell
+set wildmode=longest,list
+" }}}
 
 
 " PLUGIN {{{
